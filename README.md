@@ -1,6 +1,11 @@
 # Pumukit2 XBlock
 
-XBlock to integrate Pumukit2 into an Open edX instance.
+XBlock to integrate Pumukit2 into an Open edX instance. It is intented to work along with:
+
+- [Open edX version open-release/ficus](https://github.com/edx/edx-platform)
+- [PuMuKIT2 Video Platform version 2.3.x](https://github.com/campusdomar/PuMuKIT2/blob/2.3.x/README.md)
+- [PuMuKIT2 Open edX Bundle](https://github.com/teltek/PuMuKIT2-open-edx-bundle)
+
 
 # Download this repo
 
