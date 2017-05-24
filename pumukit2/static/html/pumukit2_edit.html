@@ -1,0 +1,74 @@
+<div class="wrapper-comp-settings is-active editor-with-buttons" id="settings-tab">
+    <section class="editor-with-tabs">
+     <div class="edit-header">
+        <span class="component-name"></span>
+        <ul class="editor-tabs">
+	  {% if show_url_tab %}
+	  <li class="inner_tab_wrap"><a href="#tab-{{self.location}}-0" class="tab current tab-url" data-tab_name="tab_url">URL</a></li>
+	  {% endif %}
+	  {% if show_upload_tab %}
+	  <li class="inner_tab_wrap"><a href="#tab-{{self.location}}-1" class="tab tab-upload" data-tab_name="tab_upload">Upload</a></li>
+	  {% endif %}
+	  {% if show_recorder_tab %}
+	  <li class="inner_tab_wrap"><a href="#tab-{{self.location}}-2" class="tab tab-recorder" data-tab_name="tab_recorder">Recorder</a></li>
+	  {% endif %}
+	  {% if show_library_tab %}
+          <li class="inner_tab_wrap"><a href="#tab-{{self.location}}-3" class="tab tab-manager" data-tab_name="tab_manager">Library</a></li>
+	  {% endif %}
+        </ul>
+     </div>
+     <div class="tabs-wrapper">
+       {% if show_url_tab %}
+       <div class="component-tab component-tab-url" id="tab-{{self.location}}-4" >
+	 <ul class="list-input settings-list">
+	   <li class="field comp-setting-entry is-set">
+	     <div class="wrapper-comp-setting">
+	       <label class="label setting-label" for="video_id">Video ID</label>
+	       <input class="input setting-input" id="video_id" value="{{self.video_id}}" type="text">
+	     </div>
+	     <span class="tip setting-help">Video ID for the Multimedia Object in Pumukit2.</span>
+	   </li>
+	 </ul>
+       </div>
+       {% endif %}
+       {% if show_upload_tab %}
+       <div class="component-tab is-inactive component-tab-upload" id="tab-{{self.location}}-5" >
+	 <ul class="list-input settings-list">
+	   <li>
+	     <iframe id="pumukit2_xblock_upload_iframe" src="{{upload_url}}" style="border:0px #FFFFFF none; width:100%; height:734px;" scrolling="auto" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" ></iframe>
+	   </li>
+	 </ul>
+       </div>
+       {% endif %}
+       {% if show_recorder_tab %}
+       <div class="component-tab is-inactive component-tab-recorder" id="tab-{{self.location}}-6" >
+	 <ul class="list-input settings-list">
+	   <li>
+	     <iframe id="pumukit2_xblock_recorder_iframe" src="{{recorder_url}}" style="border:0px #FFFFFF none; width:100%; height:734px;" scrolling="auto" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" ></iframe>
+	   </li>
+	 </ul>
+       </div>
+       {% endif %}
+       {% if show_library_tab %}
+       <div class="component-tab is-inactive component-tab-manager" id="tab-{{self.location}}-7" >
+	 <ul class="list-input settings-list">
+	   <li>
+	     <iframe src="{{pumukit_url}}" style="border:0px #FFFFFF none; width:100%; height:734px;" scrolling="auto" frameborder="0" webkitallowfullscreen="true" mozallowfullscreen="true" allowfullscreen="true" ></iframe>
+	   </li>
+	 </ul>
+       </div>
+       {% endif %}
+      </div>
+    </section>
+  <div class="xblock-actions">
+    <span class="xblock-editor-error-message"></span>
+    <ul>
+      <li class="action-item">
+	<a href="#" class="button action-primary pumukit-save-button">Save</a>
+      </li>
+      <li class="action-item">
+	<a href="#" class="button pumukit-cancel-button">Cancel</a>
+      </li>
+    </ul>
+  </div>
+</div>

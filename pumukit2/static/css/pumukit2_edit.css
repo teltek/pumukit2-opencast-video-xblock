@@ -1,0 +1,161 @@
+/* CSS for Pumukit2Edit */
+
+[class*="view-"] .modal-lg.modal-lg-pumukit2 {
+    height: 860px;
+    top: 5% !important;
+}
+
+[class*="view-"] .modal-lg.modal-editor .edit-xblock-modal.edit-xblock-pumukit2 {
+    height: 836px;
+}
+
+[class*="view-"] .modal-lg.modal-editor .modal-content.modal-content-pumukit2 {
+    height: 850px;
+}
+
+[class*="view-"] .modal-window .editor-with-buttons.wrapper-comp-settings .list-input.settings-list.settings-list-pumukit2 {
+    height: 804px;
+}
+
+[class*="view-"] .modal-window .editor-with-buttons {
+    margin-bottom: 0px;
+}
+
+[class*="view-"] .modal-lg.modal-editor .modal-content.modal-content-pumukit2 {
+    overflow-y: hidden;
+    overflow-x: hidden;
+}
+
+.tabs-wrapper.tabs-wrapper-pumukit2 {
+  padding-top: 0;
+  position: relative;
+  height: 804px;
+  border: 1px solid #b2b2b2;
+}
+
+.tabs-wrapper .wrapper-comp-settings.wrapper-comp-settings-pumukit2 {
+    display: block;
+}
+
+.editor-single-tab-name {
+  display: none;
+}
+
+.editor-with-tabs::after {
+    clear: both;
+    content: "";
+    display: table;
+}
+
+.editor-with-tabs {   
+    position: relative;
+}
+
+.editor-with-tabs .edit-header {
+    box-sizing: border-box;
+    padding: 18px 20px;
+    top: 0 !important; // ugly override for second level tab override
+    right: 0;
+    background-color: #e5e5e5;
+    color: rgb(255,255,255);
+}
+
+.editor-with-tabs .edit-header .component-name {
+    position: relative;
+    top: 0;
+    left: 0;
+    width: 50%;
+    color: rgb(0,0,0);
+    font-weight: 600;
+}
+
+.editor-with-tabs .edit-header .component-name > em {
+    display: inline-block;
+    margin-right: 5px;
+    font-weight: 400;
+    color: rgb(255,255,255);
+}
+
+.editor-with-tabs .edit-header .editor-tabs {
+    list-style: none;
+    right: 0;
+    top: 5px;
+    position: absolute;
+    padding: 12px 15px;
+}
+
+.editor-with-tabs .edit-header .editor-tabs .inner_tab_wrap {
+    display: inline-block;
+    margin-left: 8px;
+}
+
+.editor-with-tabs .edit-header .editor-tabs .inner_tab_wrap > a.tab {
+    font-size: 14px;
+    font-size: 1.4rem;    
+    background-color: transparent;
+    background-image: none;    
+    color: #999;
+    box-shadow: none;
+    border: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+}
+
+.editor-with-tabs .edit-header .editor-tabs .inner_tab_wrap > a.tab.current {
+    background-color: #666;
+    background-image: none;
+    color: #fff;
+    box-shadow: none;
+    cursor: default;
+    border: 0;
+    padding: 5px 10px;
+    text-transform: uppercase;
+    border-radius: 3px;
+}
+
+.editor-with-tabs .edit-header .editor-tabs .inner_tab_wrap > a.tab:hover,
+.editor-with-tabs .edit-header .editor-tabs .inner_tab_wrap > a.tab:focus {
+    color: rgb(0, 0, 0);
+    background-image: linear-gradient(#009FE6, #009FE6) !important;
+    border-radius: 3px;
+}
+
+.editor-with-tabs .edit-header .is-inactive,
+.editor-with-tabs .tabs-wrapper .is-inactive {
+    display: none;
+}
+
+.editor-with-tabs .edit-header .comp-subtitles-entry {
+    text-align: center;
+}
+
+.editor-with-tabs .edit-header .comp-subtitles-entry .file-upload {
+      display: none;
+}
+
+.editor-with-tabs .edit-header .comp-subtitles-entry .comp-subtitles-import-list > li {
+        display: block;
+        margin: 10px 0px 10px 0px;
+}
+.editor-with-tabs .edit-header .comp-subtitles-entry .comp-subtitles-import-list .blue-button {
+        font-size: 1em;
+        display: block;
+        width: 70%;
+        margin: 0 auto;
+        text-align: center;
+}
+ 
+.component-tab {
+  background: rgb(255,255,255);
+  position: relative;
+
+.component-tab#advanced {
+    padding: 0;
+    border: none;
+}
+
+.component-tab-url,
+.component-tab-manager,
+.component-tab-select {
+    background-color: #e5e5e5;
+}

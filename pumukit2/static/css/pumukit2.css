@@ -1,0 +1,6 @@
+/* CSS for Pumukit2XBlock */
+.xblock-editor-error-message {
+    display: none;
+    padding-left: 10px;
+    color: red;
+}

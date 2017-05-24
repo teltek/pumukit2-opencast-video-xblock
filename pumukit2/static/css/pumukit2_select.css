@@ -1,0 +1,18 @@
+.pumukit2-collection-icon,
+.pumukit2-child-icon,
+.pumukit2-grandchild-icon {
+    width: 30px;
+    height: 30px;
+}
+
+.pumukit2-list-collection-hide,
+.pumukit2-list-child-hide,
+.pumukit2-list-grandchild-hide {
+    display: none;
+}
+
+.pumukit2-list-collection-show,
+.pumukit2-list-child-show,
+.pumukit2-list-grandchild-show {
+    display: block;
+}

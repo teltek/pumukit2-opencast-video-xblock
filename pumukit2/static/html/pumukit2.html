@@ -1,0 +1,10 @@
+<div class="pumukit2_block">
+  {% if self.video_title %}
+  <h2>{{self.video_title}}</h2>
+  {% endif %}
+  {% if pumukit_url %}
+  <iframe src="{{pumukit_url}}" id="pumukitiframe" frameborder="0" border="0" width="100%" height="510px" allowfullscreen></iframe>
+  {% else %}
+  <h2>Please, select a video to show in edit.</p>
+  {% endif %}
+</div>
