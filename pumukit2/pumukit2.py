@@ -8,7 +8,7 @@ from xblock.fragment import Fragment
 
 from django.conf import settings
 
-from .utils import get_manager_url, get_iframe_url, get_api_video_url, get_repository_search_url, get_personal_recorder_url, get_upload_url
+from .utils import get_manager_url, get_iframe_url, get_api_video_url, get_personal_recorder_url, get_upload_url
 from .connections import get_json_response
 from .render_utils import render_template
 

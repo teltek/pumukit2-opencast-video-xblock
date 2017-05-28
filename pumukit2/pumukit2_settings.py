@@ -18,14 +18,10 @@ SSO_URI = 'openedx/sso'
 MANAGER_URI = 'manager'
 
 # Pumukit2 Iframe URI. For example: iframe
-#IFRAME_URI = 'iframe'
 IFRAME_URI = 'openedx/openedx/embed'
 
 # Pumukit2 API Video URI. For example: video.json
 VIDEO_URI = 'video.json'
-
-# Pumukit2 API Repository Search URI. For example: repository_search.json
-REPOSITORY_SEARCH_URI = 'repository_search.json'
 
 # Pumukit2 Personal Recorder URI. For example: personal_recorder
 PERSONAL_RECORDER_URI = 'personal_recorder'
@@ -64,7 +60,6 @@ SSO_URI = ENV_TOKENS.get('SSO_URI', SSO_URI)
 MANAGER_URI = ENV_TOKENS.get('MANAGER_URI', MANAGER_URI)
 IFRAME_URI = ENV_TOKENS.get('IFRAME_URI', IFRAME_URI)
 VIDEO_URI = ENV_TOKENS.get('VIDEO_URI', VIDEO_URI)
-REPOSITORY_SEARCH_URI = ENV_TOKENS.get('REPOSITORY_SEARCH_URI', REPOSITORY_SEARCH_URI)
 PERSONAL_RECORDER_URI = ENV_TOKENS.get('PERSONAL_RECORDER_URI', PERSONAL_RECORDER_URI)
 UPLOAD_URI = ENV_TOKENS.get('UPLOAD_URI', UPLOAD_URI)
 PASSWORD = ENV_TOKENS.get('PASSWORD', PASSWORD)

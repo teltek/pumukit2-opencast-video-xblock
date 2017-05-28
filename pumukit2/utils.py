@@ -50,19 +50,6 @@ def get_api_video_url(username, video_id):
 
     return '{base_url}/{sso_uri}/{video_id}/{video_uri}?hash={pumukit_hash}&username={username}'.format(base_url=base_url, sso_uri=sso_uri, video_id=video_id, video_uri=video_uri, pumukit_hash=pumukit_hash, username=username)
 
-def get_repository_search_url(username, lang):
-    """ Get Pumukit2 Media Manager URL."""
-    base_url = pumukit2_settings.BASE_URL
-    sso_uri = pumukit2_settings.SSO_URI
-    repository_search_uri = pumukit2_settings.REPOSITORY_SEARCH_URI
-
-    password = pumukit2_settings.PASSWORD
-    domain = pumukit2_settings.DOMAIN
-    pumukit_hash = get_hash(username, password, domain)
-
-    return '{base_url}/{sso_uri}/{repository_search_uri}?hash={pumukit_hash}&username={username}&lang={lang}'.format(base_url=base_url, sso_uri=sso_uri, repository_search_uri=repository_search_uri, pumukit_hash=pumukit_hash, username=username, lang=lang)
-
-
 def get_personal_recorder_url(username):
     """ Get Pumukit2 Personal Recorder URL."""
     base_url = pumukit2_settings.BASE_URL

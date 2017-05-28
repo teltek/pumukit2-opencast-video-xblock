@@ -22,12 +22,11 @@ created at the root path of this repository. Change these values:
 {
     "DEBUG": true,
     "PROTOCOL": "https",
-    "DOMAIN": "gcms-local-naked.teltek.es",
+    "DOMAIN": "pumukit-example-naked-uri.com",
     "SSO_URI": "openedx/sso",
     "MANAGER_URI": "manager",
     "IFRAME_URI": "openedx/openedx/embed",
     "VIDEO_URI": "video.json",
-    "REPOSITORY_SEARCH_URI": "repository_search.json",
     "PERSONAL_RECORDER_URI": "personal_recorder",
     "UPLOAD_URI": "upload",
     "PASSWORD": "ThisIsASecretPasswordChangeMe",
