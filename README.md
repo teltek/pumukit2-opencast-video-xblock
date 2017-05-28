@@ -10,7 +10,7 @@ XBlock to integrate Pumukit2 into an Open edX instance. It is intented to work a
 # Download this repo
 
 ```
-git clone 
+git clone git@github.com:teltek/pumukit2-opencast-video-xblock.git
 ```
 
 # Configure Pumukit2 XBlock
@@ -63,4 +63,4 @@ the Pumukit2 XBlock in Advanced Modules List as:
 
 # Documentation about XBlocks
 
-For more info about XBlocks, read [XBlocksInfo.md](XBlocksInfo).
+For more info about XBlocks, read [XBlocksInfo.md](XBlocksInfo.md).
