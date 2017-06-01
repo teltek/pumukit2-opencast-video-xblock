@@ -139,7 +139,6 @@ function Pumukit2Edit(runtime, element) {
     window.addEventListener('message', function (event) {
 	if ('mmId' in event.data) {
 	    $('#video_id').val(event.data.mmId);
-	    window.alert('WARNING!!\n\nVideo ID copied to URL tab.\n\nClick below on "SAVE" to persist changes.');
 	}
     }, false);
 
