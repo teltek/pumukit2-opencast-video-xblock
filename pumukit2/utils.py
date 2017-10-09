@@ -31,12 +31,15 @@ def get_iframe_url(video_id):
     """ Get Pumukit2 Iframe URL."""
     base_url = pumukit2_settings.BASE_URL
     iframe_uri = pumukit2_settings.IFRAME_URI
+    password = pumukit2_settings.PASSWORD
+    domain = pumukit2_settings.DOMAIN
+    pumukit_hash = get_hash('', password, domain)
     if not video_id and pumukit2_settings.DEFAULT_VIDEO_ID:
         video_id = pumukit2_settings.DEFAULT_VIDEO_ID
     if not video_id:
         return False
 
-    return '{base_url}/{iframe_uri}/?id={video_id}'.format(base_url=base_url, iframe_uri=iframe_uri, video_id=video_id)
+    return '{base_url}/{iframe_uri}/?id={video_id}&hash={ph}'.format(base_url=base_url, iframe_uri=iframe_uri, video_id=video_id, ph=pumukit_hash)
 
 def get_api_video_url(username, video_id):
     """ Get Pumukit2 API Video URL."""
