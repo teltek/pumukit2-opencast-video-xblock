@@ -31,7 +31,7 @@ created at the root path of this repository.
 * `SHOW_URL_TAB`: Whether to show or not the tab with the URL (ID) of the video in the Studio edit modal window.
 * `SHOW_UPLOAD_TAB`: Whether to show or not the Upload tab in the Studio edit modal window.
 * `SHOW_RECORDER_TAB`: Whether to show or not the Recorder tab in the Studio edit modal window.
-* `SHOW_LIBRARY_TAB`: Whether to show or not the Manager tab in the Studio edit modal window.
+* `SHOW_LIBRARY_TAB`: Whether to show or not the Library tab in the Studio edit modal window.
 
 Example of `env.json` with default values. Change these values:
 
