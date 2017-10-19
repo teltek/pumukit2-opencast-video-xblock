@@ -16,11 +16,28 @@ git clone git@github.com:teltek/pumukit2-opencast-video-xblock.git
 # Configure Pumukit2 XBlock
 
 Define password and domain of your Pumukit2 instance in an `env.json` file
-created at the root path of this repository. Change these values:
+created at the root path of this repository.
+
+* `DEBUG`: Django DEBUG value. Only for development environment.
+* `PROTOCOL`: Protocol used by PuMuKIT server.
+* `DOMAIN`: Domain or subdomain used to access into the naked backoffice of PuMuKIT server.
+* `SSO_URI`: URI defined to access global SSO controller in PuMuKIT2 Open edX Bundle.
+* `MANAGER_URI`: URI defined to access Manager request in Manager controller in PuMuKIT2 Open edX Bundle.
+* `IFRAME_URI`: URI defined to embed PuMuKIT videos into Open edX. This is the full URI to access Iframe request in Open edX Controller of PuMuKIT2 Open edX Bundle.
+* `VIDEO_URI`: URI defined to build the API video URL to get data of the video.
+* `PERSONAL_RECORDER_URI`: URI defined to access Personal Recorder request in Personal Recorder Controller of PuMuKIT2 Open edX Bundle. You should install Personal Recorder Bundle to make this work.
+* `UPLOAD_URI`: URI defined to access the Upload request in the Upload Controller of PuMuKIT2 Open edX Bundle.
+* `PASSWORD`: Shared secret with Open edX Bundle.
+* `SHOW_URL_TAB`: Whether to show or not the tab with the URL (ID) of the video in the Studio edit modal window.
+* `SHOW_UPLOAD_TAB`: Whether to show or not the Upload tab in the Studio edit modal window.
+* `SHOW_RECORDER_TAB`: Whether to show or not the Recorder tab in the Studio edit modal window.
+* `SHOW_LIBRARY_TAB`: Whether to show or not the Manager tab in the Studio edit modal window.
+
+Example of `env.json` with default values. Change these values:
 
 ```
 {
-    "DEBUG": true,
+    "DEBUG": false,
     "PROTOCOL": "https",
     "DOMAIN": "pumukit-example-naked-uri.com",
     "SSO_URI": "openedx/sso",
@@ -36,7 +53,6 @@ created at the root path of this repository. Change these values:
     "SHOW_LIBRARY_TAB": true
 }
 ```
-
 
 # Install XBlock
 
