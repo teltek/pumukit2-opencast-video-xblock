@@ -77,14 +77,16 @@ class Pumukit2XBlock(XBlock):
         Editing view in Studio
         """
         try:
-            username = self._get_logged_in_user()
+            user = self._get_logged_in_user()
+            username = user.opt_attrs['edx-platform.username']
+            email = user.emails[0]
 
             language = settings.LANGUAGE_CODE
             lang = language[:2]
 
-            upload_url = get_upload_url(username, lang)
-            recorder_url = get_personal_recorder_url(username)
-            pumukit_url = get_manager_url(username)
+            upload_url = get_upload_url(username, email, lang)
+            recorder_url = get_personal_recorder_url(username, email)
+            pumukit_url = get_manager_url(username, email)
 
             show_url_tab = pumukit2_settings.SHOW_URL_TAB
             show_upload_tab = pumukit2_settings.SHOW_UPLOAD_TAB
@@ -135,6 +137,10 @@ class Pumukit2XBlock(XBlock):
             }
 
         try:
+            user = self._get_logged_in_user()
+            username = user.opt_attrs['edx-platform.username']
+            email = user.emails[0]
+
             username = self._get_logged_in_user()
             pumukit_url = get_api_video_url(username, video_id)
 
@@ -172,6 +178,6 @@ class Pumukit2XBlock(XBlock):
 
     def _get_logged_in_user(self):
         user_service = self.runtime.service(self, 'user')
-        username = user_service.get_current_user().opt_attrs['edx-platform.username']
+        user = user_service.get_current_user()
 
-        return username
+        return user

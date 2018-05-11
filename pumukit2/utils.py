@@ -5,7 +5,7 @@ from datetime import datetime
 import pumukit2_settings
 import hashlib
 import logging
-
+from django.utils.http import urlquote
 
 def get_hash(email, password, domain):
     """ Get hash of Pumukit user."""
@@ -15,7 +15,7 @@ def get_hash(email, password, domain):
     return m.hexdigest()
 
 
-def get_manager_url(username):
+def get_manager_url(username, email):
     """ Get Pumukit2 Media Manager URL."""
     base_url = pumukit2_settings.BASE_URL
     sso_uri = pumukit2_settings.SSO_URI
@@ -25,7 +25,7 @@ def get_manager_url(username):
     domain = pumukit2_settings.DOMAIN
     pumukit_hash = get_hash(username, password, domain)
 
-    return '{base_url}/{sso_uri}/{manager_uri}?hash={pumukit_hash}&username={username}'.format(base_url=base_url, sso_uri=sso_uri, manager_uri=manager_uri, pumukit_hash=pumukit_hash, username=username)
+    return '{base_url}/{sso_uri}/{manager_uri}?hash={pumukit_hash}&username={username}&email={email}'.format(base_url=base_url, sso_uri=sso_uri, manager_uri=manager_uri, pumukit_hash=pumukit_hash, username=username, email=urlquote(email))
 
 def get_iframe_url(video_id):
     """ Get Pumukit2 Iframe URL."""
@@ -53,7 +53,7 @@ def get_api_video_url(username, video_id):
 
     return '{base_url}/{sso_uri}/{video_id}/{video_uri}?hash={pumukit_hash}&username={username}'.format(base_url=base_url, sso_uri=sso_uri, video_id=video_id, video_uri=video_uri, pumukit_hash=pumukit_hash, username=username)
 
-def get_personal_recorder_url(username):
+def get_personal_recorder_url(username, email):
     """ Get Pumukit2 Personal Recorder URL."""
     base_url = pumukit2_settings.BASE_URL
     sso_uri = pumukit2_settings.SSO_URI
@@ -63,9 +63,9 @@ def get_personal_recorder_url(username):
     domain = pumukit2_settings.DOMAIN
     pumukit_hash = get_hash(username, password, domain)
 
-    return '{base_url}/{sso_uri}/{recorder_uri}?hash={pumukit_hash}&username={username}'.format(base_url=base_url, sso_uri=sso_uri, recorder_uri=recorder_uri, pumukit_hash=pumukit_hash, username=username)
+    return '{base_url}/{sso_uri}/{recorder_uri}?hash={pumukit_hash}&username={username}&email={email}'.format(base_url=base_url, sso_uri=sso_uri, recorder_uri=recorder_uri, pumukit_hash=pumukit_hash, username=username, email=urlquote(email))
 
-def get_upload_url(username, lang):
+def get_upload_url(username, email, lang):
     """ Get Pumukit2 Wizard Simple Upload URL."""
     base_url = pumukit2_settings.BASE_URL
     sso_uri = pumukit2_settings.SSO_URI
@@ -75,4 +75,4 @@ def get_upload_url(username, lang):
     domain = pumukit2_settings.DOMAIN
     pumukit_hash = get_hash(username, password, domain)
 
-    return '{base_url}/{sso_uri}/{upload_uri}?hash={pumukit_hash}&username={username}&lang={lang}'.format(base_url=base_url, sso_uri=sso_uri, upload_uri=upload_uri, pumukit_hash=pumukit_hash, username=username, lang=lang)
+    return '{base_url}/{sso_uri}/{upload_uri}?hash={pumukit_hash}&username={username}&email={email}&lang={lang}'.format(base_url=base_url, sso_uri=sso_uri, upload_uri=upload_uri, pumukit_hash=pumukit_hash, username=username, email=urlquote(email), lang=lang)
