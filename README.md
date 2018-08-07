@@ -7,6 +7,30 @@ XBlock to integrate Pumukit2 into an Open edX instance. It is intented to work a
 - [PuMuKIT2 Open edX Bundle](https://github.com/teltek/PuMuKIT2-open-edx-bundle)
 
 
+# Installation for Hawthorn Dockers
+
+
+## Mount a folder for xblock outside the docker
+
+Edit file `devstack/docker-compose-host.yml`
+
+```
+version: "2.1"
+
+services:
+  ...
+  lms:
+    volumes:
+      ...
+      - ${DEVSTACK_WORKSPACE}/xblocks:/edx/app/edxapp/xblocks
+  ...
+  studio:
+    volumes:
+      ...
+      - ${DEVSTACK_WORKSPACE}/xblocks:/edx/app/edxapp/xblocks
+```
+
+
 # Download this repo
 
 ```
@@ -66,6 +90,24 @@ Uncomment this line in common.py files if it is not already uncommented:
 ```
 # XBLOCK_SELECT_FUNCTION = prefer_xmodules
 ```
+
+
+# Compile assets and restart service
+
+Inside both dockers
+
+```
+paver update_assets lms --settings=devstack_docker
+paver update_assets cms --settings=devstack_docker
+```
+
+Outside dockers
+
+```
+make lms-restart
+make studio-restart
+```
+
 
 # Enable Pumukit2 XBlock in your course
 
