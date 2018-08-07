@@ -31,13 +31,13 @@ services:
 ```
 
 
-# Download this repo
+# Download this repo in xblock folder outside Dockers
 
 ```
 git clone git@github.com:teltek/pumukit2-opencast-video-xblock.git
 ```
 
-# Configure Pumukit2 XBlock
+# Configure Pumukit2 XBlock in xblock folder outside Dockers
 
 Define password and domain of your Pumukit2 instance in an `env.json` file
 created at the root path of this repository.
@@ -78,9 +78,10 @@ Example of `env.json` with default values. Change these values:
 }
 ```
 
-# Install XBlock
+# Install XBlock inside both dockers LMS and CMS
 
 ```
+make lms-shell
 sudo chown -R edxapp:edxapp /path/to/your/xblock
 sudo -u edxapp /edx/bin/pip.edxapp install -e /path/to/your/xblock
 ```
