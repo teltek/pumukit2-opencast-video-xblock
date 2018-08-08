@@ -7,13 +7,16 @@ XBlock to integrate Pumukit2 into an Open edX instance. It is intented to work a
 - [PuMuKIT2 Open edX Bundle](https://github.com/teltek/PuMuKIT2-open-edx-bundle)
 
 
-# Download this repo
+# Installation for server
+
+
+## Download this repo
 
 ```
 git clone git@github.com:teltek/pumukit2-opencast-video-xblock.git
 ```
 
-# Configure Pumukit2 XBlock
+## Configure Pumukit2 XBlock
 
 Define password and domain of your Pumukit2 instance in an `env.json` file
 created at the root path of this repository.
@@ -54,7 +57,7 @@ Example of `env.json` with default values. Change these values:
 }
 ```
 
-# Install XBlock
+## Install XBlock
 
 ```
 sudo chown -R edxapp:edxapp /path/to/your/xblock
@@ -64,10 +67,10 @@ sudo -u edxapp /edx/bin/pip.edxapp install -e /path/to/your/xblock
 Uncomment this line in common.py files if it is not already uncommented:
 
 ```
-# XBLOCK_SELECT_FUNCTION = prefer_xmodules
+## XBLOCK_SELECT_FUNCTION = prefer_xmodules
 ```
 
-# Enable Pumukit2 XBlock in your course
+## Enable Pumukit2 XBlock in your course
 
 Access to Studio to a given course. In Settings, Advanced Settings, add
 the Pumukit2 XBlock in Advanced Modules List as:
@@ -101,13 +104,13 @@ services:
 ```
 
 
-# Download this repo in xblock folder outside Dockers
+## Download this repo in xblock folder outside Dockers
 
 ```
 git clone git@github.com:teltek/pumukit2-opencast-video-xblock.git
 ```
 
-# Configure Pumukit2 XBlock in xblock folder outside Dockers
+## Configure Pumukit2 XBlock in xblock folder outside Dockers
 
 Define password and domain of your Pumukit2 instance in an `env.json` file
 created at the root path of this repository.
@@ -148,7 +151,7 @@ Example of `env.json` with default values. Change these values:
 }
 ```
 
-# Install XBlock inside both dockers LMS and CMS
+## Install XBlock inside both dockers LMS and CMS
 
 ```
 make lms-shell
@@ -163,7 +166,7 @@ Uncomment this line in common.py files if it is not already uncommented:
 ```
 
 
-# Compile assets and restart service
+## Compile assets and restart service
 
 Inside both dockers
 
@@ -180,7 +183,7 @@ make studio-restart
 ```
 
 
-# Enable Pumukit2 XBlock in your course
+## Enable Pumukit2 XBlock in your course
 
 Access to Studio to a given course. In Settings, Advanced Settings, add
 the Pumukit2 XBlock in Advanced Modules List as:
@@ -188,6 +191,7 @@ the Pumukit2 XBlock in Advanced Modules List as:
 ```
 ["pumukit2"]
 ```
+
 
 # Documentation about XBlocks
 
