@@ -67,7 +67,7 @@ sudo -u edxapp /edx/bin/pip.edxapp install -e /path/to/your/xblock
 Uncomment this line in common.py files if it is not already uncommented:
 
 ```
-## XBLOCK_SELECT_FUNCTION = prefer_xmodules
+# XBLOCK_SELECT_FUNCTION = prefer_xmodules
 ```
 
 ## Enable Pumukit2 XBlock in your course
