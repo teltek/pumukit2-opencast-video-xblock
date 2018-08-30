@@ -6,6 +6,22 @@ XBlock to integrate Pumukit2 into an Open edX instance. It is intented to work a
 - [PuMuKIT2 Video Platform version 2.3.x](https://github.com/campusdomar/PuMuKIT2/blob/2.3.x/README.md)
 - [PuMuKIT2 Open edX Bundle](https://github.com/teltek/PuMuKIT2-open-edx-bundle)
 
+This XBlocks allows to integrate PuMuKIT2 Video Platform into Open edX to add videos,
+upload videos, manage videos or even record personal videos.
+This XBlock can be used with either PuMuKIT 2.3.x or 2.4.x.
+This videos can have public or hidden status in PuMuKIT platform,
+easing the privacy of the videos. The XBlock offers different ways to integrate
+a PuMuKIT video into Open edX. The professor has an editing modal window
+to chose how to add content to the unit. In this modal window the professor
+has various options to integrate a video from:
+
+* URL: Through the ID of the video in PuMuKIT.
+* UPLOAD: The professor can upload a video to PuMuKIT and publish it directly from Open edX, automatically sharing the video into the Open edX unit.
+* RECORDER: If the PuMuKIT plaform has enabled the Personal Recorder, this tool is also integrated into Open edX. The professor can record from his/her own personal computer a dual stream video using this XBlock in Open edX and publish it automatically in PuMuKIT and the Open edX unit.
+* LIBRARY: The professor can manage his/her own videos with this XBlock.
+
+The students will watch the video into the LMS the same way the professor watch it.
+
 
 # Installation for server
 
