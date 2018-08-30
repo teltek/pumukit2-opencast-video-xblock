@@ -30,6 +30,10 @@ has various options to integrate a video from:
 
 The students will watch the video into the LMS the same way the professor watch it.
 
+![Video in Studio](/images/04.STUDIO.png)
+
+![Video in LMS](/images/05.LMS.png)
+
 
 # Installation for server
 
