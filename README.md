@@ -16,9 +16,17 @@ to chose how to add content to the unit. In this modal window the professor
 has various options to integrate a video from:
 
 * URL: Through the ID of the video in PuMuKIT.
+
+![Add video ID in URL](/images/01.URL.png)
+
 * UPLOAD: The professor can upload a video to PuMuKIT and publish it directly from Open edX, automatically sharing the video into the Open edX unit.
+
+![Upload video](/images/02.UPLOAD.png)
+
 * RECORDER: If the PuMuKIT plaform has enabled the Personal Recorder, this tool is also integrated into Open edX. The professor can record from his/her own personal computer a dual stream video using this XBlock in Open edX and publish it automatically in PuMuKIT and the Open edX unit.
 * LIBRARY: The professor can manage his/her own videos with this XBlock.
+
+![Manage videos](/images/03.LIBRARY.png)
 
 The students will watch the video into the LMS the same way the professor watch it.
 
