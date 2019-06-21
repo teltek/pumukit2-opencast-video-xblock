@@ -137,9 +137,16 @@ function Pumukit2Edit(runtime, element) {
     });
 
     window.addEventListener('message', function (event) {
-	if ('mmId' in event.data) {
+        if(event.data === 'enableMoodlePRAdd?'){
+            event.source.postMessage({'moodlepradd':'OK'}, '*');
+        }
+
+        if (!event.data.mmId) {
+            return;
+        }
+        
 	    $('#video_id').val(event.data.mmId);
-	}
+	
     }, false);
 
 }
