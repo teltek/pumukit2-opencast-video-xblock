@@ -39,7 +39,7 @@ def get_iframe_url(video_id):
     if not video_id:
         return False
 
-    return '{base_url}/{iframe_uri}/?id={video_id}&hash={ph}'.format(base_url=base_url, iframe_uri=iframe_uri, video_id=video_id, ph=pumukit_hash)
+    return '{base_url}/{iframe_uri}/{video_id}?hash={ph}'.format(base_url=base_url, iframe_uri=iframe_uri, video_id=video_id, ph=pumukit_hash)
 
 def get_api_video_url(username, video_id):
     """ Get Pumukit2 API Video URL."""
